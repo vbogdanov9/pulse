@@ -1,16 +1,25 @@
-@media (max-width: 1201px) {
+@media (max-width: 1200px) {
         .advantages {        
-        &__item-header {
-            margin-top: 20px;
+            &__item-header {
+                margin-top: 20px;
+            }
+            &__item-descr {
+                margin-top: 10px;
+            }
         }
-        &__item-descr {
-            margin-top: 10px;
+        .carousel {         
+            .prev {                
+                left: 20px;
+            }
+            .next {                
+                right: 20px;
+            }
+
         }
-    }
 
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .header {     
         padding-left: 10px;
         padding-right: 10px;   
@@ -40,10 +49,23 @@
     .consultation {
         padding-left: 20px;
     }
+    .carousel {
+        .tns-item {
+            img {
+                width: 600px;
+            }
+        }
+        .prev {                
+            left: 10px;
+        }
+        .next {                
+            right: 10px;
+        }
+    }
 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .header {
         flex-wrap: wrap;
         // justify-content: flex-end;   
@@ -81,10 +103,24 @@
     .promo__wrapper {
         margin-top: 50px;
     }
+
+    .carousel {
+        .tns-item {
+            img {
+                width: 470px;
+            }
+        }
+        .prev {                
+            left: 5px;
+        }
+        .next {                
+            right: 5px;
+        }
+    }
     
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
     .header {
            
         &__logo {
@@ -178,6 +214,23 @@
             button {
                 height: 40px;
             }
+        }
+    }
+
+    .carousel {
+        .tns-item {
+            img {
+                width: 315px;
+            }
+        }
+        .prev, .next {                
+            left: 5px;
+            top: 0;
+            transform: translateY(-100%);
+        }
+        .next {   
+            left: auto;             
+            right: 5px;            
         }
     }
 }
