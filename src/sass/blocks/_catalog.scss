@@ -37,14 +37,22 @@
             border: none;
         }
     }
-    &__content {
-        margin-top: 60px;
+    &__content {         
+        display: none;
+        margin-top: 60px;        
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_active {
+            display: flex;
+        }
     }
     &-item {
         width: 300px;
         min-height: 440px;
         border: 2px solid #e8e8e8;
         padding: 20px 20px 25px 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
         &__img {
             display: block;
             margin: 0 auto;
@@ -66,7 +74,7 @@
             font-weight: 300;
         }
 
-        &__link {
+        &__link, &__back {
             display: block;
             margin-top: 17px;
             font-size: 14px;
@@ -74,9 +82,16 @@
             color: $main-color;
             text-align: center;
             font-weight: 500;
+            text-transform: uppercase;
             &:hover {
                 color: $main-color
             }
+        }
+        &__back {            
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 7px));            
         }
         hr {
             margin-top: 20px;
@@ -100,6 +115,57 @@
             font-size: 20px;
             color: #050505;
             font-weight: 700;
+        }
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);            
+        }
+        &__content {
+            width: 50%;
+            margin-right: 0;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+
+        }
+        &__list {
+            position: relative;
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            padding-right: 20px;
+            transition: 0.5s all;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style-type: none;
+            padding-left: 19px;
+            
+            &_active {
+                margin-left: 0px;
+                transform: translateX(-100%);
+                margin-right: 20px;                
+            }
+            li {
+                position: relative;
+                font-size: 14px;
+                color: #555555;
+                font-weight: 300;    
+                margin-bottom: 20px;
+                line-height: 17px;
+                &:before {
+                    content: '';
+                    position: absolute; 
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -14px;
+                    top: 7px;    
+
+                }            
+            }
         }
     }
 
