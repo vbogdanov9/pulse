@@ -1,4 +1,7 @@
 @media (max-width: 1200px) {
+    .title {
+        padding: 0 2%;
+    }
     .advantages {        
         &__item-header {
             margin-top: 20px;
@@ -213,9 +216,6 @@
         // }
     }
     .advantages {
-        // &__items {
-        //     flex-direction: column;
-        // }
         &__item-header {
             margin-top: 7px;
         }
