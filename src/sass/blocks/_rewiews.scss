@@ -1,0 +1,25 @@
+.rewiew {
+    display: flex;
+    margin-top: 65px;
+    &__photo {
+        padding-top: 6px;
+        padding-right: 62px;
+    }    
+    &__header {
+        font-size: 18px;
+        color: #0d0d0d;
+        font-weight: 700;
+    }
+    &__subheader {
+        margin-top: 0px;
+        font-size: 14px;
+        color: #646464;
+        font-weight: 300;
+    }
+    &__content {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #0d0d0d;
+        font-weight: 300;
+    }    
+}
