@@ -29,6 +29,11 @@
             color: $main-color;
             text-decoration: underline;
             text-transform: uppercase;
+            transition: 0.2s all;
+            &:hover {                
+                color: #fff;
+                background-color: $main-color;
+            }
         }
     }
 }

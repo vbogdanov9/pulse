@@ -25,4 +25,8 @@
         height: 40px;
         font-size: 14px;
     }
+    &:hover {
+        box-shadow: inset 1px 1px 20px white;
+    }
+    
 }
