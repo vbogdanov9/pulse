@@ -12,8 +12,9 @@
         transform: translateY(-50%);
         left: -66px;
         border: none;
-        background-color: #fff;
-        z-index: 5;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0);
+        // z-index: 5;
         img {
             width: 31px;
             height: 50px;
@@ -21,9 +22,15 @@
             &:hover {
             transform: scale(1.2); 
             }
-        }       
-        
-        
+            &:active {
+                transform: scale(1.4); 
+            }
+            
+        }
+        // &:active {
+        //     border: 3px solid red;
+        //     // border: 0px; 
+        // }
     }
     .next {
         left: auto;
