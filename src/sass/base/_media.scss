@@ -304,6 +304,7 @@
             float: left;
         }        
     }
+
     .footer {
         margin-top: 30px;
         // height: 400px; 
@@ -327,4 +328,30 @@
             zoom: 0.7;
         }
     }
+
+    .modal {
+        width: 276px;
+        min-height: 80%;
+        transform: translate(-55%, -50%);
+        padding: 3%;  
+        &__close {
+            right: -30px;
+        }
+        &__subtitle {
+            line-height: 18px;
+        }
+        &__descr {
+            margin-top: 10px;
+            line-height: 16px;
+        }
+
+        .feed-form {
+            width: 254px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+    }
+
+    
 }
