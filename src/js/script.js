@@ -18,26 +18,28 @@
 
 
 
-// слайдер    
-const slider = tns({
-  container: '.carousel__inner',
-  items: 1,
-  slideBy: 'page',
-  autoplay: false,
-  controls: false,
-  nav: false 
-});
 
-document.querySelector('.prev').addEventListener('click', function () {
-  slider.goTo('prev');
-});
-
-document.querySelector('.next').addEventListener('click', function () {
-  slider.goTo('next');
-});  
 
 
 $(document).ready(function(){
+
+    // слайдер    
+  const slider = tns({
+    container: '.carousel__inner',
+    items: 1,
+    slideBy: 'page',
+    autoplay: false,
+    controls: false,
+    nav: false 
+  });
+
+  document.querySelector('.prev').addEventListener('click', function () {
+    slider.goTo('prev');
+  });
+
+  document.querySelector('.next').addEventListener('click', function () {
+    slider.goTo('next');
+  });  
 
   // Табы   
   $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
@@ -71,16 +73,47 @@ $(document).ready(function(){
     $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
   });
 
-  // $('.button_mini').on('click', function() {
-  //   $('.overlay, #order').fadeIn('fast');
-  // });
-
+  //модальное окно купить?
   $('.button_mini').each(function(i) {
     $(this).on('click', function() {
       $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
       $('.overlay, #order').fadeIn('fast');
     });
   });
+
+  
+  //валидация
+  function validateForms(form) {
+    $(form).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        phone: "required",
+        email:  {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Пожалуйста, введите ваше имя",
+          minlength: jQuery.validator.format("минимально необходимо символов: {0}")
+        },
+        phone: "Пожалуйста, введите ваш номер телефона",
+        email: {
+          required: "Пожалуйста, введите ваш email",
+          email: "Неправильно введен адрес почты, задайте в формате name@domain"        
+        }
+      }
+    });
+  };
+
+  validateForms('#consultation-form');
+  validateForms('#consultation form');
+  validateForms('#order form');
+  
 
 }); 
 

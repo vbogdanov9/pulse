@@ -12,9 +12,10 @@
         padding: 0 20px;
         font-size: 14px;
         color: #4b4b4b;
-        &:nth-child(3) {
-            margin-bottom: 20px;
-        }
+        // хз зачем это было:
+        // &:nth-child(3) {
+        //     margin-bottom: 20px;
+        // }
     }
     &_mt25 {
         margin-top: 25px;        
