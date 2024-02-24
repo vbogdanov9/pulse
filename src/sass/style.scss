@@ -1,6 +1,11 @@
+@import 'base/variables';
+@import 'base/animations';
+
+
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
+
 
 .container {
     // min-width: 950px;
@@ -9,7 +14,7 @@
     margin: 0 auto;
 }
 
-@import 'base/variables';
+
 @import 'blocks/buttons';
 @import 'blocks/titles';
 @import 'blocks/promo';
