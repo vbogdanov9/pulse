@@ -1,46 +1,47 @@
 .carousel {
-    padding: 81px 0;
-    &__inner {
-        position: relative;
-        width: 750px;
-        margin: 0 auto;
-        
+  padding: 81px 0;
+  &__inner {
+    position: relative;
+    width: 750px;
+    margin: 0 auto;
+  }
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -66px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    // z-index: 5;
+    img {
+      width: 31px;
+      height: 50px;
+      transition: 0.2s all;
+      &:hover {
+        transform: scale(1.2);
+      }
+      &:active {
+        transform: scale(1.4);
+      }
     }
-    .prev, .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: -66px;
-        border: none;
-        outline: none;
-        background-color: rgba(255, 255, 255, 0);
-        // z-index: 5;
-        img {
-            width: 31px;
-            height: 50px;
-            transition: 0.2s all;
-            &:hover {
-            transform: scale(1.2); 
-            }
-            &:active {
-                transform: scale(1.4); 
-            }
-            
-        }
-        // &:active {
-        //     border: 3px solid red;
-        //     // border: 0px; 
-        // }
-    }
-    .next {
-        left: auto;
-        right: -66px;
-    }
-    .tns-item {
-        img {
-            display: block;
-            margin: 0 auto;
-        }
-    }
-    
+    // &:active {
+    //     border: 3px solid red;
+    //     // border: 0px;
+    // }
+  }
+  .next {
+    left: auto;
+    right: -66px;
+  }
+  //   .tns-item {
+  //     img {
+  //       display: block;
+  //       margin: 0 auto;
+  //     }
+  //   }
+  .tns-horizontal.tns-subpixel > .tns-item {
+    vertical-align: middle;
+  }
 }
