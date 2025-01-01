@@ -279,17 +279,9 @@
         width: 315px;
       }
     }
-    .prev,
-    .next {
-      left: 5px;
-      // top: 162.5px;
-      top: 50%;
-      transform: translateY(-100%);
-    }
-    .next {
-      left: auto;
-      right: 5px;
-    }
+    // .next {
+    //   left: auto;
+    // }
   }
 
   .rewiew {
